@@ -1,4 +1,5 @@
 *.o
-posterize*
+pngmcposterize
+pngmcposterize.exe
 include/
 lib/

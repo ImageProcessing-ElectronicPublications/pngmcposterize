@@ -1,4 +1,12 @@
-# Lossy compressors for true-color PNGs
+`ORG.IPEP:`
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/ImageProcessing-ElectronicPublications/pngmcposterize)
+![GitHub Release Date](https://img.shields.io/github/release-date/ImageProcessing-ElectronicPublications/pngmcposterize)
+![GitHub repo size](https://img.shields.io/github/repo-size/ImageProcessing-ElectronicPublications/pngmcposterize)
+![GitHub all releases](https://img.shields.io/github/downloads/ImageProcessing-ElectronicPublications/pngmcposterize/total)
+![GitHub](https://img.shields.io/github/license/ImageProcessing-ElectronicPublications/pngmcposterize)  
+
+# PNGmcPosterize
+Lossy compressors for true-color PNGs
 
 This fork was created to publish the latest (2.1) build for Windows as the original author didn't bother himself to do so.
 
@@ -13,8 +21,9 @@ The goal of this tool is to make RGB/RGBA PNG images more compressible, assuming
 With `-b` argument it reduces PNG file sizes by selectively blurring the image. It makes image more compressible by making it more predictable for PNG's diagonal average prediction filter.
 
 ## Usage
-
-    posterize [ -v ] [ -b ] [ -d ] [ -w ] [ -Q <quality> ] [ levels ] -- [ input.png ] [ output.png ]
+```sh
+pngmcposterize [ -v ] [ -b ] [ -d ] [ -w ] [ -Q <quality> ] [ levels ] -- [ input.png ] [ output.png ]
+```
 
 * `-b` — Use blurring instead of posterization (recommended). Without this argument posterization is used.
 * `-w` — Write compressed content to input file.

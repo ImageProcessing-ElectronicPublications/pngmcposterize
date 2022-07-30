@@ -25,6 +25,8 @@
 #include "png.h"
 #include "rwpng.h"
 
+#define PNGMCPOSERIZE_VERSION "1.2 (2022)"
+
 void optimizeForAverageFilter(
     unsigned char pixels[],
     int width, int height,
@@ -371,7 +373,7 @@ static void usage(const char *exepath)
 {
     const char *name = strrchr(exepath, '/');
     if (name) name++; else name = exepath;
-    fprintf(stderr, "Median Cut PNG Posterizer 2.1 (2015) (modified).\n" \
+    fprintf(stderr, "Median Cut PNG Posterizer %s.\n" \
     "Usage: %s [-vdbw] [-Q <quality>] [levels] [input file] [output file]\n\n" \
     "Specify number of levels (2-255) or quality (10-100).\n" \
     "-b blurize mode (uses diagonal averaging filter, recommended)\n" \
@@ -381,7 +383,7 @@ static void usage(const char *exepath)
     "If files are not specified stdin and stdout is used.\n" \
     "If -w is specified output file is not used.\n" \
     "%s -wb -Q 95 in.png\n"
-    "%s -Q 95 in.png out.png\n", name, name, name);
+    "%s -Q 95 in.png out.png\n", PNGMCPOSERIZE_VERSION, name, name, name);
 }
 
 // performs voronoi iteration (mapping histogram to palette and creating new palette from remapped values)
